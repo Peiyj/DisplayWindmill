@@ -1,0 +1,105 @@
+/* Header
+ * Name: Yingjian Pei
+ * Login: cs30fex
+ * Date: Oct 22, 2018
+ * Source of Help: myself and Tutor
+ */
+
+ Description:
+ The purpose of this programming assignment is for you to practice:
+ ARM assembly, especially branching and looping logic
+ Calling assembly routines in a C program and vice versa
+ Passing parameters and returning values to and from assembly routines
+ Parsing and using command line arguments
+
+ How to build/compile the program:
+ 1) You first login to the ucsd ieng6 account
+ 2) Then we need to ssh cs30xxy@pi-cluster.ucsd.edu
+ 3) Then we need to creat a directory named pa1
+ 4) Then we write c and assembly and c files
+ 5) Then we build the assembly and c files by following the pa instructions
+ 6) Afterward, we compile the program by "make"
+ 7) Usually, we might need to "make clean" 
+ 8) Then we would have a executionable file named pa1
+ 9) we run the program by saying ./pa1
+
+ Example of normal output:
+
+ cs30fex@pi-cluster-027:~/pa1$ ./pa1 13 a . c
+
+ aaaaaaaaaaaaaaa
+ ac......cccccca
+ acc.....ccccc.a
+ accc....cccc..a
+ acccc...ccc...a
+ accccc..cc....a
+ acccccc.c.....a
+ a......c......a
+ a.....c.cccccca
+ a....cc..ccccca
+ a...ccc...cccca
+ a..cccc....ccca
+ a.ccccc.....cca
+ acccccc......ca
+ aaaaaaaaaaaaaaa
+
+
+ Example of abnormal output:
+
+ cs30fex@pi-cluster-027:~/pa1$ ./pa1 1231231 a . c
+
+     height(1231231) must be within the range of [3 - 145]
+
+ 
+ How you tested your program:
+ I used gdb to help me debug the errors. By step, next, nexti commands, I am
+ able to find the compilation and logical erros at specific lines of function. 
+ In this pa, there are a lot of segmentation errors. I used gdp to find the
+ memory leaks and was able to make sure the program run without bugs. Then
+ finally, I used the diff command to find the difference between the original
+ and the standard solution.
+
+ README QUESTIONS:
+ 1) What Vim command can you use to divide the screen vertically? Horizontally?
+
+ :vsplit FILENAME (stackoverflow)
+
+ 2) What Vim command do you use to select a character? What command would you
+ use to select an entire line?
+
+ To select a character, we use command v in command mode. 
+ To select entire line, we use command V in command mode. 
+ (stackoverflow)
+
+ 3) You realized you made a spelling error when using one of the constants from
+ the pa1.h file. Instead of ASCII_MIN, you? You've been typing ASCI_MIN (without
+ the extra I). How would you find and replace all occurrences of ASCI_MIN in
+ your file to be ASCII_MIN?
+
+ :%s/ASCI_MIN/ASCII_MIN/g
+
+ 4) Before you merge your current version, what Git command(s) would you use to
+ check if there are no conflicts between your current version and the version
+ last commited?
+
+ git diff
+
+ 5) What Git command would you use to undo a bad commit that has been already
+ pushed?
+
+ git revert
+
+ 6) What Git command would you use to see the history of all your commits?
+
+ git log
+
+ 7) You finished the PA since you started early, but your friend hasn't and
+ just started working on it even though it's due tonight at 11:59 pm. Your
+ friend knows you are done with the PA and has asked you to help them so they
+ can finish in time. What do you do to act with integrity?
+
+ We should say no. At best, we can/should teach them the concepts based on the 
+ book or professor's notes. But never share our code.
+
+
+
